@@ -11,12 +11,32 @@
     pulaLinha();
   }
   var numeroPensado = Math.round(Math.random() * 10);
+  var tentativas = 1;
 
-  var chute = parseInt(prompt("Diigite seu chute"));
+  while (tentativas <= 3) {
+    var chute = parseInt(prompt("Digite seu chute"));
 
-  if (chute == numeroPensado) {
-    mostra("Parabens voce acertou");
-  } else {
-    mostra("Voce errou, o numero era " + numeroPensado);
+    if (chute == numeroPensado) {
+      mostra("Parabens voce acertou");
+      break;
+    } else if (tentativas == 3) {
+      mostra("Voce errou, o numero era " + numeroPensado);
+    } else {
+      mostra("Voce errou, tente novamente");
+    }
+    tentativas++;
+  }
+  while (tentativas <= 3) {
+    var chute = parseInt(prompt("Digite seu chute"));
+
+    if (chute == numeroPensado) {
+      mostra("Parabens voce acertou");
+      break;
+    } else if (tentativas == 3) {
+      mostra("Voce errou, o numero era " + numeroPensado);
+    } else {
+      mostra("Voce errou, tente novamente");
+    }
+    tentativas++;
   }
 </script>
