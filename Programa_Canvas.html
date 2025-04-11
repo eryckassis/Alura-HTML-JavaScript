@@ -1,0 +1,30 @@
+<canvas width="600" height="400" id="canvas"></canvas>
+
+<script>
+  var tela = document.querySelector("canvas");
+  var pincel = tela.getContext("2d");
+
+  pincel.fillStyle = "lightGrey"; // Define a cor do pincel como cinza claro
+  pincel.fillRect(0, 0, 600, 400); // Preenche o fundo com a cor preta
+
+  pincel.fillStyle = "green"; // Define a cor do pincel como preto
+  pincel.fillRect(0, 0, 200, 400);
+
+  pincel.fillStyle = "red"; // Define a cor do pincel como azul
+  pincel.fillRect(400, 0, 200, 400);
+
+  pincel.fillStyle = "white"; // Define a cor do pincel como branco
+  pincel.fillRect(200, 0, 200, 400); // Preenche o fundo com a cor azul
+
+  pincel.fillStyle = "yellow";
+  pincel.beginPath();
+  pincel.moveTo(300, 200);
+  pincel.lineTo(200, 400);
+  pincel.lineTo(400, 400);
+  pincel.fill();
+
+  pincel.fillStyle = "blue";
+  pincel.beginPath();
+  pincel.arc(300, 200, 50, 0, 2 * 3.14);
+  pincel.fill(); // Preenche o círculo com a cor azul
+</script>
